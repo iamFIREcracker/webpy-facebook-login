@@ -1,0 +1,12 @@
+<html>
+    <body>
+        {% if user %}
+            <p style="font-size: small"><a href="/logout">Logout</a></p>
+            <p>Hello, <a href="{{ user.profile_url }}">{{ user.name }}</a>!</p>
+            <p><img src="https://graph.facebook.com/{{ user.id }}/picture" /></p>
+        {% else %}
+            <p style="font-size: small"><a href="/login">Facebook login</a></p>
+            <p>Hello, world! </p>
+        {% endif %}
+    </body>
+</html>
